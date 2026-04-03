@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack-Regular:pixelsize=16:antialias=true:autohint=true";
+static char *font = "Server Mono:pixelsize=18:antialias=true:autohint=true,monospace:pixelsize=18:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -96,35 +96,35 @@ unsigned int tabspaces = 8;
 /* bg opacity */
 float alpha = 0.8;
 
-/* Terminal colors (16 first used in escape sequence) */
+/* Terminal colors (16 first used in escape sequence) — Shades of Purple */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	"#000000", /* black   */
+	"#EC3A37", /* red     */
+	"#3AD900", /* green   */
+	"#FAD000", /* yellow  */
+	"#7857FE", /* blue    */
+	"#FF2C70", /* magenta */
+	"#80FCFF", /* cyan    */
+	"#FFFFFF", /* white   */
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	"#5C5C61", /* bright black   */
+	"#EC3A37", /* bright red     */
+	"#3AD900", /* bright green   */
+	"#FAD000", /* bright yellow  */
+	"#6943FF", /* bright blue    */
+	"#FB94FF", /* bright magenta */
+	"#80FCFF", /* bright cyan    */
+	"#FFFFFF", /* bright white   */
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"#1E1E3F", // "black", /* default background colour */
+	"#FAD000", /* 256 -> cursor    */
+	"#555555", /* 257 -> rev cursor */
+	"#FFFFFF", /* 258 -> foreground */
+	"#1E1E3F", /* 259 -> background */
 };
 
 
